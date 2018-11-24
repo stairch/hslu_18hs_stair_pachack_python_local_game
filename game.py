@@ -526,6 +526,7 @@ except:
 def choose_action(arguments):
     agent_id = arguments[0]
     publicGameState = arguments[1]
+    publicGameState.agent_id = agnet_id
     website = str(arguments[2])
     result = requests.post(str(website+"/chooseAction"), headers={'Content-type': "application/json"},
                            data=str(publicGameState), timeout=0.5)
