@@ -28,6 +28,7 @@ class PublicGameState:
     def __init__(self, gameState=None, jsonString=None):
         self.gameField = [[]]
         self.publicPlayers = []
+        self.agent_id
         if jsonString != None:
             self._create_self_from_json(jsonString)
         else:
